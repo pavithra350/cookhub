@@ -1,0 +1,1251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1.0">
+  <title>Food Recipes</title>
+   <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Merriweather:wght@700&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">TastyHub</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navMenu">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navMenu">
+        <ul class="navbar-nav ms-auto gap-2">
+          <li class="nav-item"><a class="nav-link" href="index.html#ABOUT">ABOUT US</a></li>
+          <li class="nav-item"><a class="nav-link" href="Main.html">RECIPES</a></li>
+          <li class="nav-item"><a class="nav-link" href="#sweets">DESSERTS</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#contact">CONTACT US</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+  <!-- SEARCH -->
+  <div class="search-wrap container">
+    <input id="searchInput" class="form-control" placeholder="🔎 Search by name, category or ingredient (e.g. 'biryani', 'dessert', 'chicken')">
+  </div>
+
+  <!-- RECIPES GRID -->
+  <section id="menu" class="py-5">
+    <div class="container">
+      <div class="section-title">
+        <h2>Our Recipes</h2>
+        <p style="color:var(--subaccent);">Tap "View" to open full procedure & video</p>
+      </div>
+
+      <div class="row g-4" id="recipeGrid">
+        <!-- We'll place 16 recipe cards (title, category, short procedure, image, view button) -->
+        <!-- 1 -->
+        <div class="col-md-6 col-lg-4 recipe-item" data-name="chicken biryani" data-category="main" data-ingredients="rice chicken saffron spices onion yogurt">
+          <div class="recipe-card">
+            <div>
+              <h5>Chicken Biryani</h5>
+              <div class="meta">Main Course • Rice, Chicken</div>
+              <div class="procedure"><strong>Procedure:</strong> Marinate chicken, prepare masala, par-cook rice, layer chicken & rice, cook on low heat (dum) for 20–25 mins.</div>
+            </div>
+            <div>
+              <img class="recipe-img" src="images/Briyani.jpg" alt="Chicken Biryani">
+              <div class="mt-3 text-center">
+                <button class="btn-accent" data-bs-toggle="modal" data-bs-target="#modal1">View</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="col-md-6 col-lg-4 recipe-item" data-name="masala dosa" data-category="breakfast" data-ingredients="rice lentils potato spices">
+          <div class="recipe-card">
+            <div>
+              <h5>Masala Dosa</h5>
+              <div class="meta">Breakfast • Rice batter, Potato filling</div>
+              <div class="procedure"><strong>Procedure:</strong> Ferment rice/lentil batter, spread thin on hot tawa, add spiced potato filling and fold crisp dosa.</div>
+            </div>
+            <div>
+              <img class="recipe-img" src="Images/masala dosa.jpg" alt="Masala Dosa">
+              <div class="mt-3 text-center"><button class="btn-accent" data-bs-toggle="modal" data-bs-target="#modal2">View</button></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="col-md-6 col-lg-4 recipe-item" data-name="paneer butter masala" data-category="vegetarian" data-ingredients="paneer butter tomato cream spices">
+          <div class="recipe-card">
+            <div>
+              <h5>Paneer Butter Masala</h5>
+              <div class="meta">Vegetarian • Paneer, Tomato gravy</div>
+              <div class="procedure"><strong>Procedure:</strong> Sauté tomatoes & spices, blend to smooth gravy, add butter, cream & paneer cubes; simmer until coat forms.</div>
+            </div>
+            <div>
+              <img class="recipe-img" src="Images/panner.jpg" alt="Paneer Butter Masala">
+              <div class="mt-3 text-center"><button class="btn-accent" data-bs-toggle="modal" data-bs-target="#modal3">View</button></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="col-md-6 col-lg-4 recipe-item" data-name="butter naan" data-category="bread" data-ingredients="flour butter milk yeast">
+          <div class="recipe-card">
+            <div>
+              <h5>Butter Naan</h5>
+              <div class="meta">Bread • Flour, Butter</div>
+              <div class="procedure"><strong>Procedure:</strong> Knead enriched dough, rest, roll, cook on tandoor/tawa and brush with butter.</div>
+            </div>
+            <div>
+              <img class="recipe-img" src="Images/butter naan.jpeg" alt="Butter Naan">
+              <div class="mt-3 text-center"><button class="btn-accent" data-bs-toggle="modal" data-bs-target="#modal4">View</button></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="col-md-6 col-lg-4 recipe-item" data-name="paneer tikka" data-category="starter" data-ingredients="paneer yogurt spices skewers">
+          <div class="recipe-card">
+            <div>
+              <h5>Paneer Tikka</h5>
+              <div class="meta">Starter • Paneer, Yogurt</div>
+              <div class="procedure"><strong>Procedure:</strong> Marinate paneer cubes in spiced yogurt, skewer, grill/bake until charred edges.</div>
+            </div>
+            <div>
+              <img class="recipe-img" src="Images/tikka.jpeg" alt="Paneer Tikka">
+              <div class="mt-3 text-center"><button class="btn-accent" data-bs-toggle="modal" data-bs-target="#modal5">View</button></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="col-md-6 col-lg-4 recipe-item" data-name="idli sambar" data-category="breakfast" data-ingredients="rice lentils sambar spices">
+          <div class="recipe-card">
+            <div>
+              <h5>Idli & Sambar</h5>
+              <div class="meta">Breakfast • Fermented idli batter, Lentil sambar</div>
+              <div class="procedure"><strong>Procedure:</strong> Steam fermented batter into idlis. Prepare sambar with toor dal & veggies; temper and serve hot.</div>
+            </div>
+            <div>
+              <img class="recipe-img" src="Images/idly.jpeg" alt="Idli Sambar">
+              <div class="mt-3 text-center"><button class="btn-accent" data-bs-toggle="modal" data-bs-target="#modal6">View</button></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="col-md-6 col-lg-4 recipe-item" data-name="veg pulao" data-category="main" data-ingredients="rice vegetables spices">
+          <div class="recipe-card">
+            <div>
+              <h5>Veg Pulao</h5>
+              <div class="meta">Main Course • Rice, Vegetables</div>
+              <div class="procedure"><strong>Procedure:</strong> Sauté whole spices, add vegetables, add washed rice & water, cook covered until fluffy.</div>
+            </div>
+            <div>
+              <img class="recipe-img" src="Images/veg pulao.jpeg" alt="Veg Pulao">
+              <div class="mt-3 text-center"><button class="btn-accent" data-bs-toggle="modal" data-bs-target="#modal7">View</button></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="col-md-6 col-lg-4 recipe-item" data-name="chicken curry" data-category="main" data-ingredients="chicken tomato onion spices">
+          <div class="recipe-card">
+            <div>
+              <h5>Chicken Curry</h5>
+              <div class="meta">Main Course • Chicken, Tomato Gravy</div>
+              <div class="procedure"><strong>Procedure:</strong> Sauté onions, tomatoes & spices; add chicken and cook until tender in thick gravy.</div>
+            </div>
+            <div>
+              <img class="recipe-img" src="Images/chicken.jpeg" alt="Chicken Curry">
+              <div class="mt-3 text-center"><button class="btn-accent" data-bs-toggle="modal" data-bs-target="#modal8">View</button></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="col-md-6 col-lg-4 recipe-item" data-name="pasta alfredo" data-category="main" data-ingredients="pasta butter cream cheese garlic">
+          <div class="recipe-card">
+            <div>
+              <h5>Pasta Alfredo</h5>
+              <div class="meta">Main Course • Pasta, Cream</div>
+              <div class="procedure"><strong>Procedure:</strong> Cook pasta; in pan melt butter, cook garlic, add cream & parmesan, toss pasta to coat.</div>
+            </div>
+            <div>
+              <img class="recipe-img" src="Images/pasta.jpeg" alt="Pasta Alfredo">
+              <div class="mt-3 text-center"><button class="btn-accent" data-bs-toggle="modal" data-bs-target="#modal9">View</button></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="col-md-6 col-lg-4 recipe-item" data-name="margherita pizza" data-category="main" data-ingredients="flour tomato cheese basil">
+          <div class="recipe-card">
+            <div>
+              <h5>Margherita Pizza</h5>
+              <div class="meta">Main Course • Dough, Tomato, Cheese</div>
+              <div class="procedure"><strong>Procedure:</strong> Make pizza dough, top with tomato sauce & mozzarella, bake at high heat until crust charred.</div>
+            </div>
+            <div>
+              <img class="recipe-img" src="Images/pizza.jpeg" alt="Margherita Pizza">
+              <div class="mt-3 text-center"><button class="btn-accent" data-bs-toggle="modal" data-bs-target="#modal10">View</button></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 11 -->
+        <div class="col-md-6 col-lg-4 recipe-item" data-name="hakka noodles"data-category="main course" data-ingredients="flour cocoa sugar eggs butter">
+          <div class="recipe-card">
+            <div>
+              <h5>Hakka noodles</h5>
+              <div class="meta">main course •noddles,salt,vegetables,sauce</div>
+              <div class="procedure"><strong>Procedure:</strong>add the vegetables in a pan fry it and then add noodles &sauce in it.mix it well</div>
+            </div>
+            <div>
+              <img class="recipe-img" src="Images/noddles.jpeg" alt="hakka noodles">
+              <div class="mt-3 text-center"><button class="btn-accent" data-bs-toggle="modal" data-bs-target="#mod11">View</button></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 12 -->
+        <div class="col-md-6 col-lg-4 recipe-item" data-name="Infused chicken" data-category="side dish" data-ingredients="milk cream sugar vanilla">
+          <div class="recipe-card">
+            <div>
+              <h5>Infused chicken</h5>
+              <div class="meta">side dsh • chicken,masala,curd</div>
+              <div class="procedure"><strong>Procedure:</strong>add all the masala and make one batter to infuse in chicken,drill the chicken and infuse the masala</div>
+            </div>
+            <div>
+              <img class="recipe-img" src="Images/infused.jpeg" alt="Infused chicken">
+              <div class="mt-3 text-center"><button class="btn-accent" data-bs-toggle="modal" data-bs-target="#modal12">View</button></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 13 -->
+        <div class="col-md-6 col-lg-4 recipe-item" data-name="samosa" data-category="snacks" data-ingredients="potato peas flour spices">
+          <div class="recipe-card">
+            <div>
+              <h5>Samosa</h5>
+              <div class="meta">Snacks • Potato filling</div>
+              <div class="procedure"><strong>Procedure:</strong> Make spicy potato filling, fill dough triangles, deep fry until golden & crunchy.</div>
+            </div>
+            <div>
+              <img class="recipe-img" src="Images/samosa.jpeg" alt="Samosa">
+              <div class="mt-3 text-center"><button class="btn-accent" data-bs-toggle="modal" data-bs-target="#modal13">View</button></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 14 -->
+        <div class="col-md-6 col-lg-4 recipe-item" data-name="tomato soup" data-category="starter" data-ingredients="tomato onion garlic herbs">
+          <div class="recipe-card">
+            <div>
+              <h5>Tomato Soup</h5>
+              <div class="meta">Starter • Tomatoes, Herbs</div>
+              <div class="procedure"><strong>Procedure:</strong> Roast tomatoes, blend, simmer with stock & herbs, finish with cream if desired.</div>
+            </div>
+            <div>
+              <img class="recipe-img" src="Images/soup.jpeg" alt="Tomato Soup">
+              <div class="mt-3 text-center"><button class="btn-accent" data-bs-toggle="modal" data-bs-target="#modal14">View</button></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 15 -->
+        <div class="col-md-6 col-lg-4 recipe-item" data-name="cappuccino" data-category="drink" data-ingredients="coffee milk sugar">
+          <div class="recipe-card">
+            <div>
+              <h5>Cappuccino</h5>
+              <div class="meta">Drink • Espresso & Froth</div>
+              <div class="procedure"><strong>Procedure:</strong> Brew strong espresso, steam milk to velvety microfoam, pour milk over espresso and top with foam.</div>
+            </div>
+            <div>
+              <img class="recipe-img" src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=900&q=60" alt="Cappuccino">
+              <div class="mt-3 text-center"><button class="btn-accent" data-bs-toggle="modal" data-bs-target="#modal15">View</button></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 16 -->
+        <div class="col-md-6 col-lg-4 recipe-item" data-name="fresh orange juice" data-category="drink" data-ingredients="orange sugar water">
+          <div class="recipe-card">
+            <div>
+              <h5>Fresh Orange Juice</h5>
+              <div class="meta">Drink • Fresh Oranges</div>
+              <div class="procedure"><strong>Procedure:</strong> Squeeze fresh oranges, strain if desired, chill & serve with ice.</div>
+            </div>
+            <div>
+              <img class="recipe-img" src="Images/juice.jpeg" alt="Orange Juice">
+              <div class="mt-3 text-center"><button class="btn-accent" data-bs-toggle="modal" data-bs-target="#modal16">View</button></div>
+            </div>
+          </div>
+        </div>
+         
+        <!-- 17 -->
+        <div class="col-md-6 col-lg-4 recipe-item" data-name="panipuri" data-category="snacks" data-ingredients="puffed puris wuth spicy water">
+          <div class="recipe-card">
+            <div>
+              <h5>panipuri</h5>
+              <div class="meta">Snacks • panipuri</div>
+              <div class="procedure"><strong>Procedure:</strong> Make spicy potato filling,make tangy mint water,fill puris with stuffing and water.</div>
+            </div>
+            <div>
+              <img class="recipe-img" src="Images/panipuri.jpeg" alt="panipuri">
+            <div class="mt-3 text-center"><button class="btn-accent" data-bs-toggle="modal" data-bs-target="#modal17">View</button></div>
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </section>
+  
+<section id="sweets"></section>
+    <section id="menu" class="py-5">
+    <div class="container">
+      <div class="section-title">
+        <h2>DESSERTS</h2>
+        <p style="color:var(--subaccent);">Tap "View" to open full procedure & video</p>
+      </div>
+
+      <div class="row g-4" id="recipeGrid">
+        <!-- We'll place 16 recipe cards (title, category, short procedure, image, view button) -->
+        <!-- 1 -->
+        <div class="col-md-6 col-lg-4 recipe-item" data-name="blueberry pancake cobbler" data-category="main" data-ingredients="panbake with blueberry">
+          <div class="recipe-card">
+            <div>
+              <h5>Blueberry pancake cobbler</h5>
+              <div class="meta">Main Course •blueberry,cake</div>
+              <div class="procedure"><strong>Procedure:</strong>mix pancake batter with blueberries,pour into a greased dish and sprinkle with sugar.bake until golden and fluffy,then serve warm</div>
+            </div>
+            <div>
+              <img class="recipe-img" src="images/pancake" alt="Blueberry pancake cobbler">
+              <div class="mt-3 text-center">
+                <button class="btn-accent" data-bs-toggle="modal" data-bs-target="#modal1_1">View</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 2 -->
+        <div class="col-md-6 col-lg-4 recipe-item" data-name="banoffee pie" data-category="dessert" data-ingredients="chill,garinsh with cocoa">
+          <div class="recipe-card">
+            <div>
+              <h5>Banoffee pie</h5>
+              <div class="meta">dessert sliced banana,whipped cream</div>
+              <div class="procedure"><strong>Procedure:</strong>crush biscuits with butter,press into a base,layer with caramel,sliced bananas and whipped creams.</div>
+            </div>
+            <div>
+              <img class="recipe-img" src="Images/banoffee.jpeg" alt="banoffee pie">
+              <div class="mt-3 text-center"><button class="btn-accent" data-bs-toggle="modal" data-bs-target="#modal2_2">View</button></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 3 -->
+        <div class="col-md-6 col-lg-4 recipe-item" data-name="pocky s'mores" data-category="chocolate mouse">
+          <div class="recipe-card">
+            <div>
+              <h5>pocky s'mores</h5>
+              <div class="meta">dessert • chocolate,mores</div>
+              <div class="procedure"><strong>Procedure:</strong> roast marashmallow,sandwich with chocolate and cracker,insert pocky stick.</div>
+            </div>
+            <div>
+              <img class="recipe-img" src="Images/pocky.jpeg" alt="pocky s'mores">
+              <div class="mt-3 text-center"><button class="btn-accent" data-bs-toggle="modal" data-bs-target="#modal3_3">View</button></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 4 -->
+        <div class="col-md-6 col-lg-4 recipe-item" data-name="Cherry pie" data-category="dessert" data-ingredients="cherries,sugar,crust">
+          <div class="recipe-card">
+            <div>
+              <h5>Cherry pie</h5>
+              <div class="meta">dessert • cheery,cornstarch</div>
+              <div class="procedure"><strong>Procedure:</strong>add cherry filling to curst,cover with top layer.bake golden</div>
+            </div>
+            <div>
+              <img class="recipe-img" src="Images/cherry.jpeg" alt="Cherry pie">
+              <div class="mt-3 text-center"><button class="btn-accent" data-bs-toggle="modal" data-bs-target="#modal4_4">View</button></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 5 -->
+        <div class="col-md-6 col-lg-4 recipe-item" data-name="Mahalabiya" data-category="dessert" data-ingredients="milk pudding">
+          <div class="recipe-card">
+            <div>
+              <h5>Mahalabiya</h5>
+              <div class="meta">desserts • milk,sugar</div>
+              <div class="procedure"><strong>Procedure:</strong>cook milk with sugar & cornstarch,cook until thick,then add rose blossom water.</div>
+            </div>
+            <div>
+              <img class="recipe-img" src="Images/pudding.jpeg" alt="Mahalabiya">
+              <div class="mt-3 text-center"><button class="btn-accent" data-bs-toggle="modal" data-bs-target="#modal5_5">View</button></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 6 -->
+        <div class="col-md-6 col-lg-4 recipe-item" data-name="Chocolate mouse" data-category="" data-ingredients="dark chocolate,cream">
+          <div class="recipe-card">
+            <div>
+              <h5>Chocolate mouse</h5>
+              <div class="meta">dessert • dark chocolate,whipping cream</div>
+              <div class="procedure"><strong>Procedure:</strong>melted chocolate,fold in whipping cream.</div>
+            </div>
+            <div>
+              <img class="recipe-img" src="Images/mouse.jpeg" alt="Chocolate mouse">
+              <div class="mt-3 text-center"><button class="btn-accent" data-bs-toggle="modal" data-bs-target="#modal6_6">View</button></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 7 -->
+        <div class="col-md-6 col-lg-4 recipe-item" data-name="marjolaine" data-category="dessert" data-ingredients="chocolate ganache with buttercream">
+          <div class="recipe-card">
+            <div>
+              <h5>marjolaine</h5>
+              <div class="meta">dessert • chocolate,nutty meringue,hazelnut buttercream</div>
+              <div class="procedure"><strong>Procedure:</strong>nutty meringue,rich chocolate ganache and vannila hazelnut buttercream.</div>
+            </div>
+            <div>
+              <img class="recipe-img" src="Images/marjo.jpeg" alt="marjolaine">
+              <div class="mt-3 text-center"><button class="btn-accent" data-bs-toggle="modal" data-bs-target="#modal7_7">View</button></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 8 -->
+        <div class="col-md-6 col-lg-4 recipe-item" data-name="Chocolate Pot de Crèmes" data-category="dessert data-ingredients="chocolate creamy pots">
+          <div class="recipe-card">
+            <div>
+              <h5>Chocolate Pot de Crèmes</h5>
+              <div class="meta">dessert • chocolate,pudding cream</div>
+              <div class="procedure"><strong>Procedure:</strong>heat cream with chocolate and sugar,then whisk into egg yolks.bake custard cups in water bath</div>
+            </div>
+            <div>
+              <img class="recipe-img" src="Images/pots.jpeg" alt="Chocolate Pot de Crèmes">
+              <div class="mt-3 text-center"><button class="btn-accent" data-bs-toggle="modal" data-bs-target="#modal8_8">View</button></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 9 -->
+        <div class="col-md-6 col-lg-4 recipe-item" data-name="Panna cotta" data-category="dessert" data-ingredients="fresh cream,ponna cotta">
+          <div class="recipe-card">
+            <div>
+              <h5>Panna cotta</h5>
+              <div class="meta">dessert •panna cotta, Cream</div>
+              <div class="procedure"><strong>Procedure:</strong>bloom gelatin in cold milk,then mix with warm sweethended cream,strain and pour into cups.</div>
+            </div>
+            <div>
+              <img class="recipe-img" src="Images/panna cotta.jpeg" alt="Panna cotta">
+              <div class="mt-3 text-center"><button class="btn-accent" data-bs-toggle="modal" data-bs-target="#modal9_9">View</button></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 10 -->
+        <div class="col-md-6 col-lg-4 recipe-item" data-name="Treasure cookies" data-category="dessert" data-ingredients="wheat,choco chips with sugar">
+          <div class="recipe-card">
+            <div>
+              <h5>Treasure cookies</h5>
+              <div class="meta">dessert • chocolate,flour,sugar,choco chip</div>
+              <div class="procedure"><strong>Procedure:</strong>wheat flour,sugar,milk add to a bowl & mix,brake the cookie amd topping as choco chips .</div>
+            </div>
+            <div>
+              <img class="recipe-img" src="Images/cookies.jpeg" alt="Treasure cookies">
+              <div class="mt-3 text-center"><button class="btn-accent" data-bs-toggle="modal" data-bs-target="#modal10_10">View</button></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 11 -->
+        <div class="col-md-6 col-lg-4 recipe-item" data-name="chocolate cake" data-category="dessert" data-ingredients="flour cocoa sugar eggs butter">
+          <div class="recipe-card">
+            <div>
+              <h5>Chocolate Cake</h5>
+              <div class="meta">Dessert • Flour, Cocoa</div>
+              <div class="procedure"><strong>Procedure:</strong> Whisk wet & dry ingredients, bake until skewer comes out clean; cool & frost.</div>
+            </div>
+            <div>
+              <img class="recipe-img" src="Images/cake.jpeg" alt="Chocolate Cake">
+              <div class="mt-3 text-center"><button class="btn-accent" data-bs-toggle="modal" data-bs-target="#modal11_11">View</button></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 12 -->
+        <div class="col-md-6 col-lg-4 recipe-item" data-name="vanilla ice cream" data-category="dessert" data-ingredients="milk cream sugar vanilla">
+          <div class="recipe-card">
+            <div>
+              <h5>Vanilla Ice Cream</h5>
+              <div class="meta">Dessert • Milk, Cream</div>
+              <div class="procedure"><strong>Procedure:</strong> Heat milk & sugar, cool, churn with cream & vanilla and freeze until set.</div>
+            </div>
+            <div>
+              <img class="recipe-img" src="Images/ice cream.jpeg" alt="Vanilla Ice Cream">
+              <div class="mt-3 text-center"><button class="btn-accent" data-bs-toggle="modal" data-bs-target="#modal12_12">View</button></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 13 -->
+        <div class="col-md-6 col-lg-4 recipe-item" data-name="Butter mochi" data-category="dessert" data-ingredients="coconut-custard glutinous rice cake">
+          <div class="recipe-card">
+            <div>
+              <h5>Butter mochi</h5>
+              <div class="meta">dessert• coconut milk,butter,sugar,</div>
+              <div class="procedure"><strong>Procedure:</strong> mix rice flour,sugar,eggs,coconut milk,butter,and baking powder into a smooth batter.</div>
+            </div>
+            <div>
+              <img class="recipe-img" src="Images/mochi.jpeg" alt="Butter mochi">
+              <div class="mt-3 text-center"><button class="btn-accent" data-bs-toggle="modal" data-bs-target="#modal13_13">View</button></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 14 -->
+        <div class="col-md-6 col-lg-4 recipe-item" data-name="Nanaimo bars" data-category="dessert" data-ingredients="crumb base with graham crackers">
+          <div class="recipe-card">
+            <div>
+              <h5>Nanaimo bars</h5>
+              <div class="meta">butter,nuts and sugar</div>
+              <div class="procedure"><strong>Procedure:</strong>make a crumb base with graham crackers,cocoa,buter,nuts.top with custard buttercream and melted chocolate.</div>
+            </div>
+            <div>
+              <img class="recipe-img" src="Images/nanaimo.jpeg" alt="Nanaimo bars">
+              <div class="mt-3 text-center"><button class="btn-accent" data-bs-toggle="modal" data-bs-target="#modal14_14">View</button></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 15 -->
+        <div class="col-md-6 col-lg-4 recipe-item" data-name="Chewy Browines" data-category="dessert" data-ingredients="choco with Browines">
+          <div class="recipe-card">
+            <div>
+              <h5>Chewy Browines</h5>
+              <div class="meta">desserts • chocolate,flour & sugar,</div>
+              <div class="procedure"><strong>Procedure:</strong>melt butter and chocolate,then whisk in sugar,eggs and vanila.fold in flour,bake until set</div>
+            </div>
+            <div>
+              <img class="recipe-img" src="Images/browine.jpeg" alt="Chewy Browines">
+              <div class="mt-3 text-center"><button class="btn-accent" data-bs-toggle="modal" data-bs-target="#modal15_15">View</button></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- 16 -->
+        <div class="col-md-6 col-lg-4 recipe-item" data-name="Texas sheet cake" data-category="dessert" data-ingredients="tender choco cake slattered  with goory choco froasting">
+          <div class="recipe-card">
+            <div>
+              <h5>Texas sheet cake</h5>
+              <div class="meta">dessert • chocolate,nuts & flour</div>
+              <div class="procedure"><strong>Procedure:</strong> bake thin chocolate batter in a sheet pan,then top hot cake with warm frosting.</div>
+            </div>
+            <div>
+              <img class="recipe-img" src="Images/texas sheet cake.jpeg" alt="Texas sheet cake">
+              <div class="mt-3 text-center"><button class="btn-accent" data-bs-toggle="modal" data-bs-target="#modal16_16">View</button></div>
+            </div>
+          </div>
+        </div>
+         
+        <!-- 17 -->
+        <div class="col-md-6 col-lg-4 recipe-item" data-name="Apple sticky toffee pudding" data-category="dessert" data-ingredients="chopped apple in a moist sponage">
+          <div class="recipe-card">
+            <div>
+              <h5>Apple sticky toffee pudding</h5>
+              <div class="meta">dessert • dates,butter, and sugar</div>
+              <div class="procedure"><strong>Procedure:</strong>bake chopped apple in a moist sponage made with dates,butter, and sugar until golden.pour over rich toffee sauce with ice cream.</div>
+            </div>
+            <div>
+              <img class="recipe-img" src="Images/apple.jpeg" alt="Apple sticky toffee pudding">
+            <div class="mt-3 text-center"><button class="btn-accent" data-bs-toggle="modal" data-bs-target="#modal17_17">View</button></div>
+            </div>
+          </div>
+        </div>
+      <!-- dessert model-->
+  <div class="modal fade" id="modal1_1" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content" style="background:#0f0f0f; color:#fff;">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">Blueberry pancake cobbler</h5>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="Images/pancake" class="img-fluid rounded mb-3" alt="">
+          <h6>Ingredients</h6>
+          <ul>
+            <li> blueberry,flour,sugar,milk & eggs</li>
+          <h6>Procedure</h6>
+          <ol>
+            <li>mix pancake batter with blueberries,pour into a greased dish and sprinkle with sugar.bake until golden and fluffy,then serve warm.</li>
+          </ol>
+            <div class="ratio ratio-16x9">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/K1AsNaGg0m4?si=wkwyr7AjVPMs_lhn" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+  </div>
+  </section>
+
+  <!-- dessert model-->
+  <div class="modal fade" id="modal2_2" tabindex="-2">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content" style="background:#0f0f0f; color:#fff;">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">Banoffee pie</h5>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="Images/banoffee.jpeg" class="img-fluid rounded mb-3" alt="">
+          <h6>Ingredients</h6>
+          <ul>
+            <li> banana,flour,sugar,milk & eggs</li>
+          <h6>Procedure</h6>
+          <ol>
+            <li>crush biscuits with butter,press into a base,layer with caramel,sliced bananas and whipped creams </li>
+          </ol>
+            <div class="ratio ratio-16x9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/W6BPdCIiK_0?si=_6Du4LhJKCInuT4u" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- dessert model-->
+  <div class="modal fade" id="modal3_3" tabindex="-2">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content" style="background:#0f0f0f; color:#fff;">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">pocky s'mores</h5>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="Images/pocky.jpeg" class="img-fluid rounded mb-3" alt="">
+          <h6>Ingredients</h6>
+          <ul>
+            <li>chocolate,mores,flour,sugar,milk & eggs</li>
+          <h6>Procedure</h6>
+          <ol>
+            <li>roast marashmallow,sandwich with chocolate and cracker,insert pocky stick </li>
+          </ol>
+            <div class="ratio ratio-16x9">
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/hOIH4_ANs14?si=lCIIaiiTElMA4tSV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- dessert model-->
+  <div class="modal fade" id="modal4_4" tabindex="-2">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content" style="background:#0f0f0f; color:#fff;">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">Cherry pie</h5>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="Images/cherry.jpeg" class="img-fluid rounded mb-3" alt="">
+          <h6>Ingredients</h6>
+          <ul>
+            <li>cheery,cornstarch,flour,sugar,milk & eggs</li>
+          <h6>Procedure</h6>
+          <ol>
+            <li>add cherry filling to curst,cover with top layer.bake golden and serve it  </li>
+          </ol>
+            <div class="ratio ratio-16x9">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/r0U4BeSlQyk?si=Xlckyy_5feXnl1tp" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- dessert model-->
+  <div class="modal fade" id="modal5_5" tabindex="-2">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content" style="background:#0f0f0f; color:#fff;">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">Mahalabiya</h5>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="Images/pudding.jpeg" class="img-fluid rounded mb-3" alt="">
+          <h6>Ingredients</h6>
+          <ul>
+            <li>flour,sugar,milk & eggs</li>
+          <h6>Procedure</h6>
+          <ol>
+            <li>cook milk with sugar & cornstarch,cook until thick,then add rose blossom waterand serve it  </li>
+          </ol>
+            <div class="ratio ratio-16x9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/fhNlJ-bIJpk?si=9st8BDoYhqORsBm1" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+     
+
+    <!-- dessert model-->
+  <div class="modal fade" id="modal6_6" tabindex="-2">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content" style="background:#0f0f0f; color:#fff;">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">Chocolate mouse</h5>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="Images/mouse.jpeg" class="img-fluid rounded mb-3" alt="">
+          <h6>Ingredients</h6>
+          <ul>
+            <li>dark chocolate,whipping cream,flour,sugar,milk & eggs</li>
+          <h6>Procedure</h6>
+          <ol>
+            <li>melted chocolate,fold in whipping cream and freeze it & serve it  </li>
+          </ol>
+            <div class="ratio ratio-16x9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/Fz95m_nrvmE?si=mU2qLxURXtggBBV4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+   <!-- dessert model-->
+  <div class="modal fade" id="modal7_7" tabindex="-2">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content" style="background:#0f0f0f; color:#fff;">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">marjolaine</h5>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="Images/marjo.jpeg" class="img-fluid rounded mb-3" alt="">
+          <h6>Ingredients</h6>
+          <ul>
+            <li>chocolate,nutty meringue,hazelnut buttercream,flour,sugar,milk & eggs</li>
+          <h6>Procedure</h6>
+          <ol>
+            <li>nutty meringue,rich chocolate ganache and vannila hazelnut buttercream and freeze it & serve it  </li>
+          </ol>
+            <div class="ratio ratio-16x9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/zF-UekiCaq0?si=v0VMIm7t7gwGqavf" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- dessert model-->
+  <div class="modal fade" id="modal8_8" tabindex="-2">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content" style="background:#0f0f0f; color:#fff;">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">Chocolate Pot de Crèmes</h5>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="Images/pots.jpeg" class="img-fluid rounded mb-3" alt="">
+          <h6>Ingredients</h6>
+          <ul>
+            <li>chocolate,pudding cream,flour,sugar,milk & eggs</li>
+          <h6>Procedure</h6>
+          <ol>
+            <li>heat cream with chocolate and sugar,then whisk into egg yolks.bake custard cups in water bath& serve it  </li>
+          </ol>
+            <div class="ratio ratio-16x9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/AHPt61z9Xys?si=NtjTusjYChZYLfx9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+   <!-- dessert model-->
+  <div class="modal fade" id="modal9_9" tabindex="-2">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content" style="background:#0f0f0f; color:#fff;">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">Panna cotta</h5>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="Images/panna cotta.jpeg" class="img-fluid rounded mb-3" alt="">
+          <h6>Ingredients</h6>
+          <ul>
+            <li>chocolate, cream,flour,sugar,milk & eggs</li>
+          <h6>Procedure</h6>
+          <ol>
+            <li>bloom gelatin in cold milk,then mix with warm sweethended cream,strain and pour into cups.& serve it  </li>
+          </ol>
+            <div class="ratio ratio-16x9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/VVbtSlEJ5eY?si=vayfgill62e68bsl" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- dessert model-->
+  <div class="modal fade" id="modal10_10" tabindex="-2">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content" style="background:#0f0f0f; color:#fff;">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">Treasure cookies</h5>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="Images/cookies.jpeg" class="img-fluid rounded mb-3" alt="">
+          <h6>Ingredients</h6>
+          <ul>
+            <li>chocolate, cocoa,flour,sugar,milk & eggs</li>
+          <h6>Procedure</h6>
+          <ol>
+            <li>wheat flour,sugar,milk add to a bowl & mix,brake the cookie amd toppinf as choco chips & serve it  </li>
+          </ol>
+            <div class="ratio ratio-16x9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/loqCY9b7aec?si=BBdF0bdiZOK3_Fk4" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>   
+  
+  <!-- Modal 11: Chocolate Cake -->
+  <div class="modal fade" id="modal11_11" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content" style="background:#0f0f0f;color:#fff;">
+      <div class="modal-header border-0"><h5 class="modal-title">Chocolate Cake</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
+      <div class="modal-body">
+        <img src="Images/cake.jpeg" class="img-fluid rounded mb-3" alt="">
+        <h6>Ingredients</h6><ul><li>Flour, cocoa powder, sugar, eggs, butter</li></ul>
+        <h6>Procedure</h6><ol><li>Combine dry & wet ingredients, bake at 180°C until done; cool & frost.</li></ol>
+        <div class="ratio ratio-16x9">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/EaljSnLrJW8?si=Di2MvjtXvyjn_x_K" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> allowfullscreen></iframe></div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- Modal 12: Vanilla Ice Cream -->
+  <div class="modal fade" id="modal12_12" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content" style="background:#0f0f0f;color:#fff;">
+      <div class="modal-header border-0"><h5 class="modal-title">Vanilla Ice Cream</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
+      <div class="modal-body">
+        <img src="Images/ice cream.jpeg" class="img-fluid rounded mb-3" alt="">
+        <h6>Ingredients</h6><ul><li>Full-fat milk, cream, sugar, vanilla</li></ul>
+        <h6>Procedure</h6><ol><li>Heat milk & sugar, cool, churn with cream & vanilla, freeze till set.</li></ol>
+        <div class="ratio ratio-16x9">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/NZft7w32oOk?si=tt9UjYMeeFq7sVv7" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> allowfullscreen></iframe></div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- dessert model-->
+  <div class="modal fade" id="modal13_13" tabindex="-2">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content" style="background:#0f0f0f; color:#fff;">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">Butter mochi</h5>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="Images/mochi.jpeg" class="img-fluid rounded mb-3" alt="">
+          <h6>Ingredients</h6>
+          <ul>
+            <li>coconut milk,butter,sugar & eggs</li>
+          <h6>Procedure</h6>
+          <ol>
+            <li>mix rice flour,sugar,eggs,coconut milk,butter,and baking powder into a smooth batter.  </li>
+          </ol>
+            <div class="ratio ratio-16x9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/pWXtdLruOEI?si=WJrLhEzVKwISv_am" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>   
+    
+<!-- dessert model-->
+  <div class="modal fade" id="modal14_14" tabindex="-2">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content" style="background:#0f0f0f; color:#fff;">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">Nanaimo bars</h5>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="Images/nanaimo.jpeg" class="img-fluid rounded mb-3" alt="">
+          <h6>Ingredients</h6>
+          <ul>
+            <li>nuts,butter,sugar & eggs</li>
+          <h6>Procedure</h6>
+          <ol>
+            <li>make a crumb base with graham crackers,cocoa,buter,nuts.top with custard buttercream and melted chocolate.</li>
+          </ol>
+            <div class="ratio ratio-16x9">
+             <iframe width="560" height="315" src="https://www.youtube.com/embed/tQUd6sC81C0?si=pZc_zsGJao5nODgt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div> 
+
+   <!-- dessert model-->
+  <div class="modal fade" id="modal15_15" tabindex="-2">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content" style="background:#0f0f0f; color:#fff;">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">Chewy browine</h5>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="Images/browine.jpeg" class="img-fluid rounded mb-3" alt="">
+          <h6>Ingredients</h6>
+          <ul>
+            <li>,chocolate,nuts,flour,nuts,butter,sugar & eggs</li>
+          <h6>Procedure</h6>
+          <ol>
+            <li>bake thin chocolate batter in a sheet pan,then top hot cake with warm.bake it</li>
+          </ol>
+            <div class="ratio ratio-16x9">
+         >  <iframe width="560" height="315" src="https://www.youtube.com/embed/X9hKRIQ3uxc?si=eNnniUP-PIgDDHf2" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
+  
+  <!-- dessert model-->
+  <div class="modal fade" id="modal16_16" tabindex="-2">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content" style="background:#0f0f0f; color:#fff;">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">Texas sheet cake</h5>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="Images/texas sheet cake.jpeg" class="img-fluid rounded mb-3" alt="">
+          <h6>Ingredients</h6>
+          <ul>
+            <li>,chocolate,nuts,flour,nuts,butter,sugar & eggs</li>
+          <h6>Procedure</h6>
+          <ol>
+            <li>bake thin chocolate batter in a sheet pan,then top hot cake with warm frosting.</li>
+          </ol>
+            <div class="ratio ratio-16x9">
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/z1bDGokYEis?si=1cYMSuFXv-66vUf3" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- dessert model-->
+  <div class="modal fade" id="modal17_17" tabindex="-2">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content" style="background:#0f0f0f; color:#fff;">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">Apple sticky toffee pudding</h5>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="Images/apple.jpeg" class="img-fluid rounded mb-3" alt="">
+          <h6>Ingredients</h6>
+          <ul>
+            <li>apple,nuts,flour,dates,butter,sugar & eggs</li>
+          <h6>Procedure</h6>
+          <ol>
+            <li>bake chopped apple in a moist sponage made with dates,butter, and sugar until golden.pour over rich toffee sauce with ice cream</li>
+            </ol>
+            <div class="ratio ratio-16x9">
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/RBkhdRBp1xo?si=8lyoCCeNvXKb573H" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>allowfullscreen></iframe>allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- ---------- MODALS (full procedure + ingredients + video) ---------- -->
+  <!-- Modal 1: Chicken Biryani -->
+  <div class="modal fade" id="modal1" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered">
+      <div class="modal-content" style="background:#0f0f0f; color:#fff;">
+        <div class="modal-header border-0">
+          <h5 class="modal-title">Chicken Biryani</h5>
+          <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+        </div>
+        <div class="modal-body">
+          <img src="Images/Briyani.jpg" class="img-fluid rounded mb-3" alt="">
+          <h6>Ingredients</h6>
+          <ul>
+            <li>2 cups Basmati rice</li>
+            <li>1 kg Chicken pieces</li>
+            <li>Yogurt, ginger-garlic paste, biryani spices, onions, saffron</li>
+          </ul>
+          <h6>Procedure</h6>
+          <ol>
+            <li>Marinate chicken with yogurt, spices & salt for 1–2 hours.</li>
+            <li>Fry sliced onions until golden. Prepare masala with tomatoes and spices.</li>
+            <li>Par-cook rice with whole spices until 70% done.</li>
+            <li>Layer rice & chicken in a heavy pot, sprinkle saffron milk, seal and cook on low (dum) for 20–25 mins.</li>
+            <li>Gently mix and serve hot with raita.</li>
+          </ol>
+            <div class="ratio ratio-16x9">
+                <iframe width="560" height="315" src="https://www.youtube.com/embed/95BCU1n268w?si=GYB0vqfaJa9lcbWD" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Modal 2: Masala Dosa -->
+  <div class="modal fade" id="modal2" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content" style="background:#0f0f0f;color:#fff;">
+      <div class="modal-header border-0">
+        <h5 class="modal-title">Masala Dosa</h5>
+        <button class="btn-close btn-close-white" data-bs-dismiss="modal"></button>
+      </div>
+      <div class="modal-body">
+        <img src="Images/dosa.jpeg" class="img-fluid rounded mb-3" alt="">
+        <h6>Ingredients</h6>
+        <ul><li>Rice, urad dal (for batter)</li><li>Potatoes, mustard seeds, curry leaves, turmeric</li></ul>
+        <h6>Procedure</h6>
+        <ol><li>Soak rice & dal, grind and ferment overnight.</li><li>Prepare potato masala with spices.</li><li>Spread batter on hot tawa, add masala, fold & serve with chutney.</li></ol>
+        <div class="ratio ratio-16x9">
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/mDqkxZ3UVzc?si=i2TROux3kW1Gir_y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>allowfullscreen></iframe></div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- Modal 3: Paneer Butter Masala -->
+  <div class="modal fade" id="modal3" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content" style="background:#0f0f0f;color:#fff;">
+      <div class="modal-header border-0"><h5 class="modal-title">Paneer Butter Masala</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
+      <div class="modal-body">
+        <img src="Images/panner.jpg" class="img-fluid rounded mb-3" alt="">
+        <h6>Ingredients</h6><ul><li>Paneer cubes, tomatoes, butter, cream</li></ul>
+        <h6>Procedure</h6><ol><li>Make tomato-onion gravy with spices; blend smooth.</li><li>Cook gravy with butter & cream, add paneer and simmer.</li></ol>
+        <div class="ratio ratio-16x9">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/oYZ--rdHL6I?si=M1cTrJpyj-UHUtz-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> allowfullscreen></iframe></div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- Modal 4: Butter Naan -->
+  <div class="modal fade" id="modal4" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content" style="background:#0f0f0f;color:#fff;">
+      <div class="modal-header border-0"><h5 class="modal-title">Butter Naan</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
+      <div class="modal-body">
+        <img src="Images/butter naan.jpeg" class="img-fluid rounded mb-3" alt="">
+        <h6>Ingredients</h6><ul><li>All-purpose flour, yeast, milk, butter</li></ul>
+        <h6>Procedure</h6><ol><li>Knead soft dough using milk, rest till doubled.</li><li>Dimple, roll & cook on hot skillet or oven; brush with butter.</li></ol>
+        <div class="ratio ratio-16x9">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/8iqjrE38dVk?si=WCR_s-JtNF--FdU6" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> allowfullscreen></iframe></div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- Modal 5: Paneer Tikka -->
+  <div class="modal fade" id="modal5" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content" style="background:#0f0f0f;color:#fff;">
+      <div class="modal-header border-0"><h5 class="modal-title">Paneer Tikka</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
+      <div class="modal-body">
+        <img src="Images/tikka.jpeg" class="img-fluid rounded mb-3" alt="">
+        <h6>Ingredients</h6><ul><li>Paneer, hung curd, tikka masala, lemon</li></ul>
+        <h6>Procedure</h6><ol><li>Marinate paneer cubes in spiced yogurt for 30–60 min.</li><li>Grill/bake till charred; serve with chutney.</li></ol>
+        <div class="ratio ratio-16x9">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/hsR0JaD1TyA?si=rHeSa6T04v5UqMxV" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> allowfullscreen></iframe></div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- Modal 6: Idli & Sambar -->
+  <div class="modal fade" id="modal6" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content" style="background:#0f0f0f;color:#fff;">
+      <div class="modal-header border-0"><h5 class="modal-title">Idli & Sambar</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
+      <div class="modal-body">
+        <img src="Images/idly.jpeg" class="img-fluid rounded mb-3" alt="">
+        <h6>Ingredients</h6><ul><li>Rice, urad dal, toor dal, veggies, sambar powder</li></ul>
+        <h6>Procedure</h6><ol><li>Ferment batter; steam idlis. Cook dal & veggies for sambar; temper with mustard & curry leaves.</li></ol>
+        <div class="ratio ratio-16x9">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/nIoIzarlQ1k?si=8iS0obFqAHcteLc-" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> allowfullscreen></iframe></div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- Modal 7: Veg Pulao -->
+  <div class="modal fade" id="modal7" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content" style="background:#0f0f0f;color:#fff;">
+      <div class="modal-header border-0"><h5 class="modal-title">Veg Pulao</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
+      <div class="modal-body">
+        <img src="Images/veg pulao.jpeg" class="img-fluid rounded mb-3" alt="">
+        <h6>Ingredients</h6><ul><li>Basmati rice, mixed vegetables, whole spices</li></ul>
+        <h6>Procedure</h6><ol><li>Sauté spices & veggies, add rice & water, simmer covered until rice is fluffy.</li></ol>
+        <div class="ratio ratio-16x9">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/jj2DDnCmOJ0?si=EGO8eoRoun4jXOIy" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> allowfullscreen></iframe></div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- Modal 8: Chicken Curry -->
+  <div class="modal fade" id="modal8" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content" style="background:#0f0f0f;color:#fff;">
+      <div class="modal-header border-0"><h5 class="modal-title">Chicken Curry</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
+      <div class="modal-body">
+        <img src="Images/chicken.jpeg" class="img-fluid rounded mb-3" alt="">
+        <h6>Ingredients</h6><ul><li>Chicken, onions, tomatoes, garam masala</li></ul>
+        <h6>Procedure</h6><ol><li>Fry onions until deep brown, add tomatoes & spices, add chicken and cook until tender.</li></ol>
+        <div class="ratio ratio-16x9">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/sH-juTnjm-Y?si=NTisCdtIhDjOFPsX" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> allowfullscreen></iframe></div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- Modal 9: Pasta Alfredo -->
+  <div class="modal fade" id="modal9" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content" style="background:#0f0f0f;color:#fff;">
+      <div class="modal-header border-0"><h5 class="modal-title">Pasta Alfredo</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
+      <div class="modal-body">
+        <img src="Images/pasta.jpeg" class="img-fluid rounded mb-3" alt="">
+        <h6>Ingredients</h6><ul><li>Pasta, butter, garlic, cream, parmesan</li></ul>
+        <h6>Procedure</h6><ol><li>Cook pasta; in skillet melt butter, add garlic & cream, toss with pasta and parmesan until silky.</li></ol>
+        <div class="ratio ratio-16x9">
+         <iframe width="560" height="315" src="https://www.youtube.com/embed/3Legcod6ODA?si=_6DwyCXmpWbDLQgt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> allowfullscreen></iframe></div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- Modal 10: Margherita Pizza -->
+  <div class="modal fade" id="modal10" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content" style="background:#0f0f0f;color:#fff;">
+      <div class="modal-header border-0"><h5 class="modal-title">Margherita Pizza</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
+      <div class="modal-body">
+        <img src="Images/pizza.jpeg" class="img-fluid rounded mb-3" alt="">
+        <h6>Ingredients</h6><ul><li>Pizza dough, tomato sauce, mozzarella, fresh basil</li></ul>
+        <h6>Procedure</h6><ol><li>Roll dough, spread sauce, top with cheese & basil; bake at highest temp until crust blisters.</li></ol>
+        <div class="ratio ratio-16x9">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/vcfNpDtVqOw?si=72rBF51NcnI-H-ZB" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> allowfullscreen></iframe></div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- Modal 11: Hakka noodles -->
+  <div class="modal fade" id="mod11" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content" style="background:#0f0f0f;color:#fff;">
+      <div class="modal-header border-0"><h5 class="modal-title">Hakka noodles</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
+      <div class="modal-body">
+        <img src="Images/noddles.jpeg" class="img-fluid rounded mb-3" alt="">
+        <h6>Ingredients</h6><ul><li>main course •noddles,salt,vegetables,sauce</li></ul>
+        <h6>Procedure</h6><ol><li>add the vegetables in a pan fry it and then add noodles &sauce in it.mix it well</li></ol>
+        <div class="ratio ratio-16x9">
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/aQHr9Zsnzbw?si=8n6-oqYEKwsw7m5L" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> allowfullscreen></iframe></div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- Modal 12: Infused chicken -->
+  <div class="modal fade" id="modal12" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content" style="background:#0f0f0f;color:#fff;">
+      <div class="modal-header border-0"><h5 class="modal-title">Infused chicken</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
+      <div class="modal-body">
+        <img src="Images/infused.jpeg" class="img-fluid rounded mb-3" alt="">
+        <h6>Ingredients</h6><ul><li> chicken,masala,curd</li></ul>
+        <h6>Procedure</h6><ol><li>add all the masala and make one batter to infuse in chicken,drill the chicken and infuse the masala.</li></ol>
+        <div class="ratio ratio-16x9">
+           <iframe width="560" height="315" src="https://www.youtube.com/embed/WVY8gmm3yxo?si=BXfLgF1igogGHuZY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> allowfullscreen></iframe></div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- Modal 13: Samosa -->
+  <div class="modal fade" id="modal13" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content" style="background:#0f0f0f;color:#fff;">
+      <div class="modal-header border-0"><h5 class="modal-title">Samosa</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
+      <div class="modal-body">
+        <img src="Images/samosa.jpeg" class="img-fluid rounded mb-3" alt="">
+        <h6>Ingredients</h6><ul><li>Potatoes, peas, flour for dough, spices</li></ul>
+        <h6>Procedure</h6><ol><li>Make firm dough; prepare spiced potato filling; shape triangles and deep fry till golden.</li></ol>
+        <div class="ratio ratio-16x9">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/3OZn-iCGf5s?si=hBfaNECVph8g9dur" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> allowfullscreen></iframe></div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- Modal 14: Tomato Soup -->
+  <div class="modal fade" id="modal14" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content" style="background:#0f0f0f;color:#fff;">
+      <div class="modal-header border-0"><h5 class="modal-title">Tomato Soup</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
+      <div class="modal-body">
+        <img src="Images/soup.jpeg" class="img-fluid rounded mb-3" alt="">
+        <h6>Ingredients</h6><ul><li>Tomatoes, onion, garlic, stock</li></ul>
+        <h6>Procedure</h6><ol><li>Roast tomatoes, blend with stock, simmer with herbs and seasonings; finish with cream if liked.</li></ol>
+        <div class="ratio ratio-16x9">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/Duc89AZY9j4?si=Krstc-wRTV5FuTst" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe> allowfullscreen></iframe></div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- Modal 15: Cappuccino -->
+  <div class="modal fade" id="modal15" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content" style="background:#0f0f0f;color:#fff;">
+      <div class="modal-header border-0"><h5 class="modal-title">Cappuccino</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
+      <div class="modal-body">
+        <img src="https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=1200&q=60" class="img-fluid rounded mb-3" alt="">
+        <h6>Ingredients</h6><ul><li>Fresh espresso, milk</li></ul>
+        <h6>Procedure</h6><ol><li>Brew espresso; steam milk to velvety foam; pour over espresso and serve immediately.</li></ol>
+        <div class="ratio ratio-16x9">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/FkbUfqtFnH8?si=1OLsFme3GQTGKoRt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>" allowfullscreen></iframe></div>
+      </div>
+    </div></div>
+  </div>
+
+  <!-- Modal 16: Fresh Orange Juice -->
+  <div class="modal fade" id="modal16" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content" style="background:#0f0f0f;color:#fff;">
+      <div class="modal-header border-0"><h5 class="modal-title">Fresh Orange Juice</h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
+      <div class="modal-body">
+        <img src="Images/juice.jpeg" class="img-fluid rounded mb-3" alt="">
+        <h6>Ingredients</h6><ul><li>Fresh oranges, sugar (optional), water/ice</li></ul>
+        <h6>Procedure</h6><ol><li>Squeeze oranges by hand or juicer, strain if needed, chill and serve.</li></ol>
+        <div class="ratio ratio-16x9">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/xERYcYBoL8c?si=a-lOKSdVMsj-QGoY" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>allowfullscreen></iframe></div>
+      </div>
+    </div></div>
+    </div>
+  
+      <!-- Modal 17: Panipuri -->
+  <div class="modal fade" id="modal17" tabindex="-1">
+    <div class="modal-dialog modal-lg modal-dialog-centered"><div class="modal-content" style="background:#0f0f0f;color:#fff;">
+      <div class="modal-header border-0"><h5 class="modal-title">Panipuri<h5><button class="btn-close btn-close-white" data-bs-dismiss="modal"></button></div>
+      <div class="modal-body">
+        <img src="Images/panipuri.jpeg" class="img-fluid rounded mb-3" alt="">
+        <h6>Ingredients</h6><ul><li>puri,potato,water,species</li></ul>
+        <h6>Procedure</h6><ol><li>Make spicy potato filling,make tangy mint water,fill puris with stuffing and water</li></ol>
+        <div class="ratio ratio-16x9">
+          <iframe width="560" height="315" src="https://www.youtube.com/embed/S5KPYMh9QOQ?si=039x-eTDn2DiA_n9" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>" allowfullscreen></iframe>
+  </div></div>
+  </div>
+
+   
+  
+
+  <!-- ---------- SCRIPTS ---------- -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
